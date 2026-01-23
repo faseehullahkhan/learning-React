@@ -1,13 +1,117 @@
-*{
+/* this is a global CSS , which applies on everything */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
-html,body{
+html,
+body {
   height: 100%;
   width: 100%;
 }
-body{
+body {
   background-color: #111;
+}
+.div-of-Cards{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Nav {
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(90, 78, 80);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px;
+}
+.lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+.Ulist {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.Ulist li {
+  font-size: large;
+}
+.card {
+  height: 75vh;
+  width: 25vw;
+  background-color: #222;
+  border-radius: 20px;
+  margin: 10px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.top{
+  position: absolute;
+  top: 2%;
+  left: 3%;
+}
+.center{
+  position: absolute;
+  width: fit-content;
+  top: 68%;
+  left: 3%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 6px;
+}
+.bottom{
+  position: absolute;
+  width: fit-content;
+  top: 78%;
+  left: 3%;
+  right: 3%;
+  /* text-align:start; */
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.3);
+  /* backdrop-filter: blur(8px); */
+  border-radius: 6px;
+}
+.buttons{
+  position: absolute;
+  width: 100%;
+  top: 90%;
+  left: 3%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 10%;
+  /* filter: blur(8px); */
+}
+.buttons div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.buttons button{
+  width: 8vw;
+  height: 5vh;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 6px;
 }
