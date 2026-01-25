@@ -12,6 +12,9 @@ const App = () => {
   const likhraha = (value)=>{
     console.log(`mujhy user ka naam mil gaya =  ${value}`)
   }
+  const pageScrolling = () => {
+    console.log("Page Scrolling")
+  }
   const users = [
     {
       img: "https://i.pinimg.com/736x/d1/5e/bb/d15ebb84ecd86da52d5ae9fc100997e7.jpg",
@@ -50,7 +53,7 @@ const App = () => {
   ];
   return (
     <>
-      <div>
+      <div onWheel={pageScrolling}>
         <Section1 users={users} />
         <Section2 />
       </div>
