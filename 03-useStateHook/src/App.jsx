@@ -14,14 +14,18 @@ const App = () => {
   //   userr.name = "Ahmed";
   //   userr.age = 21;
   //   setuser(userr);
+  //   we can also change the values using prev
+  //   setUser(prev => {...prev , profession : "Developer"})
   // };
 
   const [arr, setarr] = useState([32, 53, 54, 123, 43]);
   const changeValue = () => {
-    const arr2 = [...arr]
-    arr2[2]  = 21
-    arr2.push(0)
-    setarr(arr2)
+    // const arr2 = [...arr];
+    // arr2[2] = 21;
+    // arr2.push(0);
+    // setarr(arr2);
+    // we can also do this
+    // setarr(prev => [...prev , 321])
   };
   return (
     <div>
