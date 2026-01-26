@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Card from "./Components/Card";
 
 const App = () => {
-  const [title, settitle] = useState(" ");
-  const [description, setdescription] = useState(" ");
+  const [title, settitle] = useState("");
+  const [description, setdescription] = useState("");
   const [task, setTask] = useState([]);
 
   const formSubmission = (grab) => {
@@ -36,15 +36,15 @@ const App = () => {
             className="w-full px-4 py-5 outline-none border border-black-100 rounded-3xl text-cyan-50"
             type="text"
             value={title}
-            placeholder="Enter Task"
+            placeholder="EnterTask"
             onChange={(e) => {
               settitle(e.target.value);
             }}
           />
           <textarea
-            className="w-full  min-h-[120px] max-h-[240px] resize-y overflow-auto px-4 py-5 outline-none border border-black-100 rounded-3xl text-cyan-50"
+            className="w-full  min-h-[120px] max-h-[240px] resize-y overflow-auto px-4 py-5 outline-none border border-black-100 rounded-3xl text-cyan-50 bg-transparent"
             type="text"
-            placeholder="Enter Details"
+            placeholder="EnterDetails"
             value={description}
             onChange={(e) => {
               setdescription(e.target.value);
