@@ -2,10 +2,11 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex px-20 justify-between items-center py-7">
+    <div className="fixed top-0 left-0 w-full flex justify-between items-center px-16 py-7 
+bg-gradient-to-b from-white/100 via-white/90 to-transparent z-50">
       <div>
         <svg
-          width="48%"
+          width="42%"
           height="70%"
           viewBox="0 0 126 33"
           fill="none"
