@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BsArrowDown } from "react-icons/bs";
 
 const Page1 = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -15,21 +16,23 @@ const Page1 = () => {
 
   return (
     <div
-      className="relative h-screen w-full overflow-hidden flex justify-center items-center"
+      className="relative h-screen w-full overflow-hidden flex justify-center items-center "
       onMouseMove={handleMouseMove}
     >
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-200 ease-out"
+        className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-200 ease-out "
         src="/Video-1.mp4"
         autoPlay
         muted
         loop
         playsInline
         style={{
-          transform: `translate(${pos.x * 30}px, ${pos.y * 30}px) scale(1.05)`,
+          transform: `translate(${pos.x * 30}px, ${pos.y * 30}px) scale(1.0)`,
         }}
       />
-      <div className="absolute top-[13%] flex flex-col items-center text-center gap-6 bg-gradient-to-b from-white/100 via-white/90 to-transparent">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent pointer-events-none" />
+      <div className="absolute top-[13%] flex flex-col items-center text-center gap-4 bg-gradient-to-b from-white/90 via-white/90 to-transparent rounded-lg">
         <svg
           className="w-24 md:w-30"
           viewBox="0 0 96 121"
@@ -64,13 +67,25 @@ const Page1 = () => {
              bg-[linear-gradient(90deg,#0a0a0a,#1e468c_25%,#aa87fa_98%,#ffffff)]
              bg-clip-text text-transparent"
         >
-          Your De-Fi Native Prime <br /> Broker
+          Your DeFi-Native Prime <br /> Broker
         </h1>
 
-        <p className="text-lg md:text-3xl font- text-black/90">
+        <p className="text-lg md:text-2xl font-semibold text-black/90 mt-6 mb-2">
           Borrow against your entire DeFi portfolio, <br />
           regardless of the venues you use.
         </p>
+        <div className="relative mt-6">
+          <div className="bg-black text-white px-12 py-3 text-xl rounded">
+            <a href="">Launch App</a>
+          </div>
+          <div
+            className="absolute left-1/2 -bottom-6 -translate-x-1/2 
+             w-8 h-10 rounded-3xl border border-gray-400 bg-transparent 
+             flex items-center justify-center"
+          >
+            <BsArrowDown className="text-gray-400  text-xl animate-drop-loop" />
+          </div>
+        </div>
       </div>
     </div>
   );
